@@ -4,6 +4,10 @@ import styled from 'styled-components'
 export const Container = styled.header`
   background-color: ${props => props.theme.colors.white};
   padding: 30px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
 `
 
 export const Nav = styled.nav`
