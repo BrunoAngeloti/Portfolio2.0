@@ -12,7 +12,7 @@ export default function Main(){
   return (
     <Container>
       <ImageWrapper>
-        <Image quality={70} width={600} height={1000} alt="astronauta no espaço" src="/imageHome.svg"/>
+        <Image quality={70} width={700} height={1150} alt="astronauta no espaço" src="/imageHome.svg"/>
       </ImageWrapper>
 
       <Content>

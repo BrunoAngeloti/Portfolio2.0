@@ -5,7 +5,7 @@ export const Container = styled.header`
   background-color: ${props => props.theme.colors.white};
   position: relative;
   flex-direction: row;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
 `
 
