@@ -4,7 +4,9 @@ import {
   Title,
   Paragraph,
   SpaceImage,
-  ImageWrapper
+  ImageWrapper,
+  Section,
+  Icons
 } from "./About.styles"
 
 import Image from "next/image"
@@ -19,17 +21,30 @@ const contentText = [
 export default function About(){
   return (
     <Container>
-      <Content>
-        <Title>QUEM SOU EU?</Title>
-        {contentText.map((text, index) => (
-          <Paragraph key={index}>{text}</Paragraph>
-        ))}
-      </Content>
-      <SpaceImage>
-        <ImageWrapper>
-          <Image quality={100} width={500} height={680} alt="astronauta no espaço" src="/eu.png"/>
-        </ImageWrapper>
-      </SpaceImage>
+      <Section>
+        <Content>
+          <Title>QUEM SOU EU?</Title>
+          {contentText.map((text, index) => (
+            <Paragraph key={index}>{text}</Paragraph>
+          ))}
+          <Icons>
+            <a href="https://www.instagram.com/bruno_angeloti/" target="_blank" rel="noopener noreferrer">
+              <Image src="/icons/instagram.svg" width={28} height={28} alt="icone instagram"/>
+            </a>
+            <a href="https://github.com/BrunoAngeloti" target="_blank" rel="noopener noreferrer">
+              <Image src="/icons/github.svg" width={28} height={28} alt="icone github"/>
+            </a>
+            <a href="https://www.linkedin.com/in/bruno-angeloti-pires" target="_blank" rel="noopener noreferrer">
+              <Image src="/icons/linkedin.svg" width={28} height={28} alt="icone linkedin"/>
+            </a>
+          </Icons>
+        </Content>
+        <SpaceImage>
+          <ImageWrapper>
+            <Image quality={100} width={500} height={680} alt="astronauta no espaço" src="/eu.png"/>
+          </ImageWrapper>
+        </SpaceImage>
+      </Section>
     </Container>
   )
 }
