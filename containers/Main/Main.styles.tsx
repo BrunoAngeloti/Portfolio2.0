@@ -13,6 +13,18 @@ export const ImageWrapper = styled.div`
   position: absolute;
   left: 0;
   top: -45px;
+  width: 700px;
+  height: 1150px;
+
+  @media (max-width: 1880px) {
+    width: 600px;
+    height: 1000px;
+  }
+
+  @media (max-width: 1280px) {
+    width: 480px;
+    height: 880px;
+  }
 `
 
 export const ImageWrapperPlant = styled.div`
@@ -20,6 +32,15 @@ export const ImageWrapperPlant = styled.div`
   margin-right: 65px;
   right: 0;
   bottom: 0;
+
+  width: 850px;
+  height: 250px;
+
+  @media (max-width: 1280px) {
+    width: 650px;
+    height: 50px;
+    bottom: 140px;
+  }
 `
 
 export const Content = styled.section`
@@ -47,8 +68,15 @@ export const Title = styled(TextCommon)`
             background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  @media (max-width: 1280px) {
+    font-size: 60px;
+  }
 `
 
 export const Subtitle = styled(TextCommon)`
   font-size: 50px;
+  @media (max-width: 1280px) {
+    font-size: 30px;
+  }
 `
