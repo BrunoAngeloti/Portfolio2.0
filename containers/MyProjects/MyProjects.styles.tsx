@@ -5,8 +5,8 @@ export const Container = styled.header`
   //background-color: ${props => props.theme.colors.main};
   background: url('/backgroundMyProject.svg');
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 40%;
+  background-repeat: repeat-x;
+  background-position: 50% 70%;
   padding: 50px 80px;
   width: 100%;
   align-items: center;
