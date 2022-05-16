@@ -51,6 +51,9 @@ export const Title = styled.h1<{ fontSize: number }>`
   color: ${props => props.theme.colors.white};
   font-size: ${props => props.fontSize}px;
   margin: 0;
+  @media (max-width: 1280px) {
+    font-size: ${props => props.fontSize - 16}px;
+  }
 `
 
 export const Paragraph = styled.p`
@@ -58,6 +61,10 @@ export const Paragraph = styled.p`
   color: ${props => props.theme.colors.white};
   font-size: 20px;
   margin-top: 30px;
+
+  @media (max-width: 1280px) {
+    font-size: 16px;
+  }
 `
 
 
