@@ -7,6 +7,21 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+      
+    /* Track */
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #6C63FF;
+      border-radius: 5px;
+    }
   }
 
   a {

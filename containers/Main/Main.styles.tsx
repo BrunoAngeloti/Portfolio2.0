@@ -7,6 +7,7 @@ export const Container = styled.header`
   flex-direction: row;
   height: 100vh;
   width: 100%;
+  
 `
 
 export const ImageWrapper = styled.div`
@@ -25,6 +26,31 @@ export const ImageWrapper = styled.div`
     width: 480px;
     height: 880px;
   }
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+`
+
+export const ImageWrapperMobile = styled.div`
+  position: absolute;
+  display: none;
+  left: -25px;
+  top: 0px;
+  width: 500px;
+  height: 400px;
+
+  @media (max-width: 992px) {
+    display: flex;
+  }
+  @media (max-width: 480px) {
+    width: 400px;
+    top: -24px;
+  }
+  @media (max-width: 380px) {
+    width: 300px;
+    top: -68px;
+  }
 `
 
 export const ImageWrapperPlant = styled.div`
@@ -41,6 +67,14 @@ export const ImageWrapperPlant = styled.div`
     height: 50px;
     bottom: 140px;
   }
+  @media (max-width: 730px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 80px;
+    left: 0;
+  }
 `
 
 export const Content = styled.section`
@@ -50,6 +84,10 @@ export const Content = styled.section`
   justify-content: center;
   width: 100%;
   padding-right: 80px;
+  @media (max-width: 730px) {
+    align-items: center;
+    padding-right: 0px;
+  }
 `
 
 const TextCommon = styled.h1`
@@ -62,6 +100,9 @@ const TextCommon = styled.h1`
 
 export const Title = styled(TextCommon)`
   font-size: 80px;
+  width: 100%;
+  text-align: right;
+  word-break: break-word;
   span{
     background: -webkit-linear-gradient(60deg, #AB28AD, #492CB1);
     -webkit-background-clip: text;
@@ -72,11 +113,28 @@ export const Title = styled(TextCommon)`
   @media (max-width: 1280px) {
     font-size: 60px;
   }
+
+  @media (max-width: 730px) {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+    text-align: center;
+  }
 `
 
 export const Subtitle = styled(TextCommon)`
   font-size: 50px;
   @media (max-width: 1280px) {
     font-size: 30px;
+  }
+  @media (max-width: 730px) {
+    font-size: 30px;
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    font-size: 20px;
   }
 `

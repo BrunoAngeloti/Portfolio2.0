@@ -19,7 +19,7 @@ export const Stars = styled.div`
   background-image: url('/stars1.svg');
   background-repeat: repeat;
   background-size: contain;
-
+  z-index: 1;
   @media (max-width: 1280px) {
     width: 600px;
   }
@@ -30,6 +30,7 @@ export const Section = styled.section`
   flex-direction: row;
   max-width: 1280px;
   gap: 40px;
+  z-index: 2;
   @media (max-width: 992px) {
     flex-direction: column;
   }
@@ -51,6 +52,7 @@ export const Title = styled.h1<{ fontSize: number }>`
   color: ${props => props.theme.colors.white};
   font-size: ${props => props.fontSize}px;
   margin: 0;
+  z-index: 2;
   @media (max-width: 1280px) {
     font-size: ${props => props.fontSize - 16}px;
   }
@@ -61,6 +63,7 @@ export const Paragraph = styled.p`
   color: ${props => props.theme.colors.white};
   font-size: 20px;
   margin-top: 30px;
+  z-index: 2;
 
   @media (max-width: 1280px) {
     font-size: 16px;
@@ -74,6 +77,9 @@ export const SpaceImage = styled.div`
   align-items: flex-start;
   justify-content: center;
   position: relative;
+  @media (max-width: 992px) {
+    display: none;
+  }
 `
 
 export const ImageWrapper = styled.div`
@@ -96,6 +102,7 @@ export const Icons = styled.div`
   margin-top: 40px;
   gap: 40px;
   flex-wrap: wrap;
+  z-index: 2;
   a{
     display: flex;
     align-items: center;
@@ -123,6 +130,7 @@ export const Icon = styled.div`
   justify-content: center;
   flex-direction: column;
   box-sizing: content-box;
+  z-index: 2;
 
   span{
     color: ${props => props.theme.colors.main};
@@ -141,4 +149,5 @@ export const Skills = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+  z-index: 2;
 `

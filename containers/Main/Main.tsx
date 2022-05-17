@@ -2,6 +2,7 @@ import Image from "next/image"
 import { 
   Container, 
   ImageWrapper, 
+  ImageWrapperMobile,
   Content, 
   Title, 
   Subtitle,
@@ -14,6 +15,9 @@ export default function Main(){
       <ImageWrapper>
         <Image quality={100} width={700} height={1150} alt="astronauta no espaço" src="/imageHome.svg"/>
       </ImageWrapper>
+      <ImageWrapperMobile>
+        <Image quality={100} width={700} height={616} alt="astronauta no espaço" src="/imageHome2.svg"/>
+      </ImageWrapperMobile>
 
       <Content>
         <Title>
