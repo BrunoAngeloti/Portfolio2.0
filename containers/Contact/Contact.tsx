@@ -18,7 +18,7 @@ import {
 
 import Image from "next/image"
 
-export default function Contact(){
+export default function Contact({ referencia } : any){
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
@@ -67,7 +67,7 @@ export default function Contact(){
   };
 
   return (
-    <Container>
+    <Container ref={referencia}>
       <Section>
         <Content>
           <Title fontSize={80}>CONTATO</Title>

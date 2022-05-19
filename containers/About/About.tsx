@@ -41,9 +41,9 @@ const contentText = [
   'Nascido e crescido em São Paulo, mas atualmente moro em Vitória-ES há 10 anos, estudando na Universidade Federal do Espírito Santo.'
 ]
 
-export default function About(){
+export default function About({ referencia } : any){
   return (
-    <Container>
+    <Container ref={referencia}>
       <Stars />
       <Section>
         <Content>

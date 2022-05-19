@@ -5,7 +5,7 @@ export const Container = styled.header`
   background-size: auto;
   background-repeat: repeat-x;
   background-position: 50% 90%; 
-
+  position: relative;
   @media (max-width: 665px) {
     
   }

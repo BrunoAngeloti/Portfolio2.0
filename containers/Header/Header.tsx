@@ -2,11 +2,33 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react'
 import { Container, Nav, List, Items, Hamburger, NavMobile, BackDrop } from "./Header.styles"
 
-export default function Header(){
+export default function Header(props: any){
   const [visible, setVisible] = useState(true)
   const [background, setBackground] = useState(false)
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)
   let val: number;
+
+  function scroll(){
+    setIsOpenMenu(false)
+    window.scrollTo({
+      top: props.pag1.current.offsetTop,
+      behavior: 'smooth'
+    })
+  }
+  function scrollProjects(){
+    setIsOpenMenu(false)
+    window.scrollTo({
+      top: props.pag2.current.offsetTop,
+      behavior: 'smooth'
+    })
+  }
+  function scrollContact(){
+    setIsOpenMenu(false)
+    window.scrollTo({
+      top: props.pag3.current.offsetTop,
+      behavior: 'smooth'
+    })
+  }
 
   function handleMenu() {
     setIsOpenMenu(state => !state)
@@ -41,9 +63,9 @@ export default function Header(){
       <Container visible={visible} background={background}>
         <Nav>
           <List>
-            <Items>SOBRE</Items>
-            <Items>PROJETOS</Items>
-            <Items>CONTATO</Items>
+            <Items onClick={scroll}>SOBRE</Items>
+            <Items onClick={scrollProjects}>PROJETOS</Items>
+            <Items onClick={scrollContact}>CONTATO</Items>
           </List>
           <Hamburger onClick={handleMenu}>
             <Image src="/iconHamburger.svg" width={32} height={32} alt="icone para abrir o menu lateral"/>
@@ -52,9 +74,9 @@ export default function Header(){
       </Container>
       <NavMobile show={isOpenMenu}>
         <Image style={{ cursor: 'pointer' }} src="/close.svg" alt="Close" width={24} height={24} onClick={handleMenu} />
-        <Items>SOBRE</Items>
-        <Items>PROJETOS</Items>
-        <Items>CONTATO</Items>
+        <Items onClick={scroll}>SOBRE</Items>
+        <Items onClick={scrollProjects}>PROJETOS</Items>
+        <Items onClick={scrollContact}>CONTATO</Items>
       </NavMobile>
       <BackDrop show={isOpenMenu} onClick={handleMenu}/>
     </>

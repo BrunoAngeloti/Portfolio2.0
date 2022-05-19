@@ -9,21 +9,18 @@ import {
 
 import { CardProject } from "../../components/CardProject/CardProject"
 
-export default function MyProjects(){
+import { projects } from '../../data/projects/data'
+
+export default function MyProjects({ referencia } : any){
   return (
-    <Container>
+    <Container ref={referencia}>
       <Stars />
       <Section>
         <Title fontSize={80}>MEUS PROJETOS</Title>
         <Content>
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
+          {projects.map((project, idx) => <CardProject key={idx} project={project}/>)}
         </Content>
-        <Button>Ver mais projetos</Button>
+        <Button><a href="https://github.com/BrunoAngeloti?tab=repositories" target="_blank" rel="noreferrer">Ver mais projetos</a></Button>
       </Section>
     </Container>
   )
