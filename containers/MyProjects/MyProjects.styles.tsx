@@ -1,17 +1,25 @@
 import styled from 'styled-components'
 
 export const Container = styled.header`
-  display: flex;
-  //background-color: ${props => props.theme.colors.main};
   background: url('/backgroundMyProject.svg');
-  background-size: cover;
+  background-size: auto;
   background-repeat: repeat-x;
-  background-position: 50% 70%;
-  padding: 50px 80px;
-  width: 100%;
+  background-position: 50% 90%; 
+
+  @media (max-width: 665px) {
+    
+  }
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  padding: 50px;
+  width: 100%;
+  overflow: hidden; 
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `
 
 export const Stars = styled.div`
@@ -24,35 +32,45 @@ export const Stars = styled.div`
   background-repeat: repeat;
   background-size: contain;
   
+  @media (max-width: 992px) {
+    left: 10px;
 
-  @media (max-width: 1280px) {
-    width: 600px;
+    height: 200px;
   }
+ 
 `
 
 export const Section = styled.section`
-  display: flex;
-  max-width: 1280px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  max-width: 1281px;
   gap: 20px;
 
+  @media(max-width: 850px){
+    width: 100%;        
+  } 
 `
 
 export const Content = styled.div`
-  width: 1280px;
-  margin-top: 60px;
-  padding: 0px 50px;
   display: flex;
-  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+
   flex-wrap: wrap;
-  z-index: 20;
-  gap: 20px;
-  justify-content: space-between;
-  @media (max-width: 1280px) {
-    margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  
+  @media(max-width: 840px){
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    padding: 20px;
   }
-  @media (max-width: 992px) {
-    width: 100%;
+  @media (max-width: 454px) {
+    padding: 0px 20px;
   }
 `
 
@@ -63,9 +81,16 @@ export const Title = styled.h1<{ fontSize: number }>`
   margin: 0;
   width: 100%;
   text-align: right;
+  z-index: 10;
   padding: 0px 50px;
   @media (max-width: 1280px) {
     font-size: ${props => props.fontSize - 16}px;
+  }
+  @media (max-width: 681px) {
+    text-align: center;
+  }
+  @media (max-width: 454px) {
+    font-size: ${props => props.fontSize - 24}px;
   }
 `
 export const Button = styled.button`
