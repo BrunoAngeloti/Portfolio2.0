@@ -2,26 +2,35 @@ import styled from 'styled-components'
 
 export const Container = styled.header`
   display: flex;
-  background: url('/backgroundMyProject2.svg');
-  background-size: cover;
+  background-image: url('/backgroundMyProject2.svg');
+  background-color: ${props => props.theme.colors.main};
+  background-size: auto;
+  background-position-x: 50%;
   background-repeat: repeat-x;
-  background-position: 50% -20%;
+  
   padding: 50px 80px;
   width: 100%;
+  
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media (max-width: 700px) {
+    padding: 40px 20px;
+  }
 `
 
 export const Section = styled.section`
   display: flex;
   flex-direction: row;
   max-width: 1280px;
+  width: 100%;
   margin-top: 220px;
   gap: 50px;
-
+ 
   @media (max-width: 1280px) {
     margin-top: 150px;
+    padding: 20px 20px;
   }
 `
 
@@ -63,6 +72,10 @@ export const Input = styled.input`
   outline: none;
   padding: 5px 15px;
   font-family: 'Oswald', sans-serif;
+
+  @media (max-width: 1280px) {
+    height: 40px;
+  }
 `
 
 export const TextArea = styled.textarea`
@@ -91,6 +104,10 @@ export const TextArea = styled.textarea`
     background: ${props => props.theme.colors.secondary};
     border-radius: 5px;
   }
+
+  @media (max-width: 1280px) {
+    height: 100px;
+  }
 `
 
 export const Title = styled.h1<{ fontSize: number }>`
@@ -99,7 +116,7 @@ export const Title = styled.h1<{ fontSize: number }>`
   font-size: ${props => props.fontSize}px;
   margin: 0;
   @media (max-width: 1280px) {
-    font-size: ${props => props.fontSize - 16}px;
+    font-size: ${props => props.fontSize - 20}px;
   }
 `
 
@@ -138,5 +155,9 @@ export const Button = styled.button`
   &:hover {
     filter: brightness(0.9);
     transform: translateY(-5px);
+  }
+
+  @media (max-width: 1280px) {
+    height: 45px;
   }
 `

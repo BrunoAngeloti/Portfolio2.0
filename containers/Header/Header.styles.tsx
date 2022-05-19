@@ -11,8 +11,8 @@ export const Container = styled.header<{ visible: boolean, background: boolean }
   top: ${props => props.visible ? '0' : '-100%'};
   right: 0;
   z-index: 10;
-  @media (max-width: 992px) {
-    padding: 20px 0;
+  @media (max-width: 1280px) {
+    padding: 15px 0;
   }
 `
 
@@ -56,6 +56,10 @@ export const Items = styled.a`
   &:hover::after{
     transform: scaleX(1);
   }  
+
+  @media (max-width: 1280px) {
+    font-size: 16px;
+  }
 `
 
 export const Hamburger = styled.div`
