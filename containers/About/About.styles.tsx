@@ -68,6 +68,9 @@ export const Paragraph = styled.p`
   @media (max-width: 1280px) {
     font-size: 16px;
   }
+  @media (max-width: 992px) {
+    text-align: justify;
+  }
 `
 
 
@@ -117,6 +120,9 @@ export const Icons = styled.div`
       transform: translateY(-5px) rotateZ(10deg);
     }
   }
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
 `
 
 export const Icon = styled.div`
@@ -150,4 +156,8 @@ export const Skills = styled.div`
   flex-direction: column;
   margin-top: 40px;
   z-index: 2;
+
+  @media (max-width: 992px) {
+    align-items: center;
+  }
 `

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.header`
   display: flex;
@@ -70,16 +70,16 @@ export const Input = styled.input`
   border-radius: 5px;
   border: none;
   outline: none;
-  padding: 5px 15px;
+  padding: 0px 15px;
   font-family: 'Oswald', sans-serif;
-
+  font-size: 16px;
   @media (max-width: 1280px) {
     height: 40px;
   }
 `
 
 export const TextArea = styled.textarea`
- width: 100%;
+  width: 100%;
   height: 150px;
   background-color:  ${props => props.theme.colors.white};
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);
@@ -89,7 +89,7 @@ export const TextArea = styled.textarea`
   outline: none;
   padding: 10px 15px;
   font-family: 'Oswald', sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -140,7 +140,7 @@ export const SpaceImage = styled.div`
   }
 `
 
-export const Button = styled.button`
+export const Button = styled.button<{loading: boolean}>`
   width: 120px;
   background-color: ${props => props.theme.colors.secondary};
   height: 55px;
@@ -160,4 +160,9 @@ export const Button = styled.button`
   @media (max-width: 1280px) {
     height: 45px;
   }
+
+  ${props => props.loading && css`
+    cursor: not-allowed;
+    opacity: 0.5;
+  `}
 `
