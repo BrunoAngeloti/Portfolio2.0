@@ -44,7 +44,7 @@ export const projects2 = [
   },
   {
     title: 'Moddev',
-    image: '/Projects/Moddev.png',
+    image: '/Projects/moddev.png',
     link: 'https://moddev.com.br/'
   },
   {
