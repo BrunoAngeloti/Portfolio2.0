@@ -6,12 +6,13 @@ type CardProjectProps = {
         title: string
         image: string
         link: string
-    }
+    },
+    wfull?: boolean
 }
 
-export function CardProject({ project }: CardProjectProps){
+export function CardProject({ project, wfull }: CardProjectProps){
     return(
-        <Container>
+        <Container wfull={wfull ?? false}>
             <ImageWrapper image={project.image}>
         <Gradient />
         </ImageWrapper>

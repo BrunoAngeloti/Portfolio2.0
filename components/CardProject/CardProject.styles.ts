@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.div<{ wfull: boolean }>`
     display: flex;
     height: 250px;
-    width: 350px;
+    width: ${(props) => props.wfull ? '100%' : '350px'};
     background-color: #f5f5f5;
     flex-direction: column;
     align-items: center;
@@ -14,8 +14,8 @@ export const Container = styled.div`
     box-shadow: 0 4px 20px rgba(0,0,0,.1);
 
     @media (max-width: 1280px) {
-        width: 280px;
         min-width: 280px;
+        width: ${(props) => props.wfull ? '100%' : '280px'};
     }
 
     @media (max-width: 454px) {
